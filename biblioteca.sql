@@ -31,6 +31,58 @@ CREATE TABLE emprestimo (
     FOREIGN KEY (id_livro) REFERENCES livros(id)
 );
 
+INSERT INTO autores (nome) VALUES
+("Machado de Assis"),
+("Rosa Coltinho"),
+("Jorge Amado"),
+("Clarice Lispector"),
+("José de Alencar"),
+("Carlos Drummond de Andrade"),
+("Graciliano Ramos"),
+("Cecília Meireles"),
+("Paulo Coelho"),
+("Érico Veríssimo");
+
+INSERT INTO livros (titulo, ano_publicacao, fk_id_autor_autores) VALUES
+("Dom Casmurro", 1899, 1),
+("A Hora da Estrela", 1977, 4),
+("Capitães da Areia", 1937, 3),
+("Iracema", 1865, 5),
+("Memórias Póstumas de Brás Cubas", 1881, 1),
+("O Amor Natural", 1992, 8),
+("O Alquimista", 1988, 9),
+("Vidas Secas", 1938, 7),
+("Sentimento do Mundo", 1940, 6),
+("O Tempo e o Vento", 1949, 10);
+
+
+INSERT INTO alunos (nome, email) VALUES
+("William Matias", "william@email.com"),
+("Maria Silva", "maria@email.com"),
+("João Souza", "joao@email.com"),
+("Ana Paula", "ana.paula@email.com"),
+("Carlos Eduardo", "carlos.edu@email.com"),
+("Fernanda Lima", "fernanda@email.com"),
+("Lucas Pereira", "lucas@email.com"),
+("Juliana Alves", "juliana@email.com"),
+("Ricardo Santos", "ricardo@email.com"),
+("Patrícia Costa", "patricia@email.com");
+
+
+INSERT INTO emprestimo (data_emprestimo, data_devolucao, devolvido, fk_id_aluno_alunos, fk_id_livro_livros) VALUES
+('2025-08-01', '2025-08-10', TRUE, 1, 1),
+('2025-08-05', '2025-08-15', FALSE, 2, 3),
+('2025-07-20', '2025-07-30', TRUE, 3, 2),
+('2025-08-08', '2025-08-18', FALSE, 4, 5),
+('2025-07-25', '2025-08-04', TRUE, 5, 7),
+('2025-08-02', '2025-08-12', TRUE, 6, 4),
+('2025-08-06', '2025-08-16', FALSE, 7, 6),
+('2025-07-28', '2025-08-07', TRUE, 8, 8),
+('2025-08-03', '2025-08-13', FALSE, 9, 9),
+('2025-07-30', '2025-08-09', TRUE, 10, 10);
+
+
+
 
 /* SELECIONE TODOS OS REGISTROS DA TABELA ALUNOS */
 SELECT * FROM alunos;
